@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form tags</title>
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="form validations">
+    <meta name="author" content="self">
+    <!-- <meta http-equiv="refresh" content="10"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+        h1 {
+            text-align: center;
+            color: #00ff1f;
+            font-family: verdana, sans-serif;
+        }
+
+        /* form styles */
+        form {
+            line-height: 3.5;
+            width: 60%;
+            margin: auto;
+        }
+
+        /* input styles */
+        .in {
+            width: 75%;
+            padding: 8px;
+            border: 2px inset powderblue;
+            border-radius: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+        }
+
+        .in:hover,
+        .in:focus {
+            border: 2px inset rgb(231, 213, 108);
+            border-radius: 10px;
+            outline: none;
+            /*predefined outline set to none to make border-visible */
+        }
+
+        /* label styles */
+        .lab {
+            display: inline-block;
+            text-align: left;
+            width: 20%;
+            font-weight: 500;
+            font-family: "Audiowide", sans-serif;
+            /* text-transform: uppercase; */
+        }
+
+        /* radio button styles */
+        input.lang {
+            width: 20px;
+        }
+
+        /* input submit */
+        input[type="submit"] {
+            float: right;
+            margin-left: 20px;
+            padding: 5px;
+            width: 100px;
+            background-color: #e95e5e;
+            color: #fff;
+            font-weight: 900;
+            border: 2px inset powderblue;
+            border-radius: 20px;
+        }
+
+        /* for smaller screens */
+        @media screen and (max-width: 600px) {
+
+            /* form style */
+            form {
+                width: 80%;
+            }
+
+            /* input style */
+            .in {
+
+                width: 100%;
+            }
+
+            /* label style */
+            .lab {
+                display: inline;
+            }
+
+            /* radio vertical style */
+            label.lan {
+                display: inline-block;
+                width: 25%;
+            }
+
+            /* span radio group style */
+            .lan-group {
+                display: inline-block;
+                width: 70%;
+            }
+
+            label.lang {
+                display: inline-block;
+                width: 80%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Form with all validation checks and is responsive</h1>
+    <form action="#" method="get" autocomplete="on">
+        <label class="lab" for="fname">First name</label>:
+        <input class="in" type="text" id="fname" name="firstname" maxlength="40" required><br>
+        <label class="lab" for="lname">Last name</label>:
+        <input class="in" type="text" id="lname" name="lastname" maxlength="40"><br>
+        <label class="lab" for="email">Email</label>:
+        <input class="in" type="email" id="email" name="email" maxlenght="50" required
+            placeholder="someone@email.com"><br>
+        <label class="lab" for="pass">Password</label>:
+        <input class="in" type="password" id="pass" name="password" maxlenght="30" required><br>
+        <label class="lab" for="cpass">CPassword</label>:
+        <input class="in" type="password" id="cpass" name="cpass" required><br>
+
+        <label class="lab" for="textarea">Comments</label>:
+        <textarea id="textarea" class="in" style="height:40px;"></textarea><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
